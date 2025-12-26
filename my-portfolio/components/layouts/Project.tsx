@@ -13,6 +13,9 @@ const Project: React.FC = () => {
           <ProjectCard image="./assets/p3.png" title="Social Media Web" />
           <ProjectCard image="./assets/p2.jpg" title="Admin Dashboard" />
         </div>
+
+        <button 
+        className="bg-blue-500 px-6 py-2 rounded-xl font-semibold hover:scale-105 transition">More...</button>
       </div>
     </section>
   )

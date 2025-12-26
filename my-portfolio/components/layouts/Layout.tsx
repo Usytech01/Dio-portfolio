@@ -4,7 +4,7 @@ import Image from "next/image";
 const Layout: React.FC = () => {
     return(
         <section className="min-h-screen bg-[#061427] flex items-center pt-28">
-            <div className="mx-auto grid md:grid-cols-2 gap-10 px-6">
+            <div className="mx-auto grid md:grid-cols-2 gap-8 px-6">
                 {/* Left Content */}
                 
                 <motion.div
@@ -32,11 +32,18 @@ const Layout: React.FC = () => {
                     animate={{ opacity: 1, scale: 1}}
                     className="flex justify-center"
                 >
-                    <div className=" border border-blue-500/30 animate-spin-slow">
+                    <div className=" animate-spin-slow flex grid-cols-2 gap-4">
                         <Image
-                            src="/assets/nine.webp"
+                            src="/assets/pic5.jpg"
                             alt="profile"
-                            width={200}
+                            width={250}
+                            height={150}
+                            className="rounded-full border border-blue-500/30 object-cover"
+                         />
+                        <Image
+                            src="/assets/pic.jpeg"
+                            alt="profile"
+                            width={250}
                             height={150}
                             className="rounded-full border border-blue-500/30 object-cover"
                          />
