@@ -1,24 +1,29 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import AnimatedPhotoBackground from "../common/AnimatedPhotoBackground";
+import OutlineButton from "../common/OutlineButton";
 
 const Layout: React.FC = () => {
     return(
-        <section className="min-h-screen bg-[#061427] flex items-center pt-28">
+        <section className="min-h-screen bg-[#061427] flex items-center pt-10">
+             {/* Background */}
+             {/* <AnimatedPhotoBackground /> */}
+
             <div className="mx-auto grid md:grid-cols-2 gap-8 px-6">
                 {/* Left Content */}
                 
                 <motion.div
-                    initial={{opacity:0, x: -60}}
-                    animate={{opacity: 1, x: 0}}
-                    transition={{duration: 0.8}}
+                    initial={{opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{duration: 0.6}}
                 >
-                    <p className="text-blue-400 uppercase tracking-wide text-sm mb-3">Usman O. Dio</p>
-                    <h1 className="text-3xl md:text-6Xl font-bold text-white leading-tight">HI! I'M USMAN <br/> 
+                   <OutlineButton>Usman O. Dio</OutlineButton>
+                    <h1 className="text-3xl md:text-6Xl font-bold text-white leading-tight my-2">HI! I'M USMAN <br/> 
                         <span className="text-blue-500">I'M A DESIGNER AND A DEVELOPER</span>
                     </h1>
 
-                    <p className="text-gray-400 mt-6 max-w-md">I design modern UI/UX experience clean aesthetics and smooth interactions | <br/>
-                        <span className="">Professional Fullstack Web Developer</span>
+                    <p className="text-gray-400 mt-6 max-w-md">I Design Modern UI/UX Experience Clean Aesthetics And Smooth Interactions | <br/>
+                        <span className="">Professional Fullstack Web Developer, Crafting Modern React & Next.js Experiences.</span>
                     </p>
 
                     <div className="flex items-center gap-4 mt-8">
@@ -32,20 +37,13 @@ const Layout: React.FC = () => {
                     animate={{ opacity: 1, scale: 1}}
                     className="flex justify-center"
                 >
-                    <div className=" animate-spin-slow flex grid-cols-2 gap-4">
-                        <Image
-                            src="/assets/pic5.jpg"
-                            alt="profile"
-                            width={250}
-                            height={150}
-                            className="rounded-full border border-blue-500/30 object-cover"
-                         />
+                    <div className="flex grid-cols-2 gap-2">
                         <Image
                             src="/assets/pic.jpeg"
                             alt="profile"
-                            width={250}
-                            height={150}
-                            className="rounded-full border border-blue-500/30 object-cover"
+                            width={300}
+                            height={100}
+                            className="rounded-full border border-blue-500/30 hover:scale-110 transition-transform duration-300 overflow-hidden"
                          />
                     </div>
                 </motion.div>

@@ -1,3 +1,4 @@
+import AnimatedBackground from "@/components/common/AnimatedPhotoBackground";
 import { About } from "@/components/layouts/About";
 import { Footer } from "@/components/layouts/Footer";
 import Header from "@/components/layouts/Header";
