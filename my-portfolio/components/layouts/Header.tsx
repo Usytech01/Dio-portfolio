@@ -17,7 +17,7 @@ const Header: React.FC = () => {
                 <Link href="#"><h1 className="text-white font-bold text-xl ">USM<span className="text-gray-400 hover:text-white">A</span>N</h1></Link>
                 <nav className="space-x-6 font-semibold">
                     <Link href="/" className="hover:text-gray-400 duration-300">Home</Link>
-                    <Link href="/gallery" className="hover:text-gray-400 duration-300">Gallery</Link>
+                    <Link href="/gallery" className="hover:text-gray-400 duration-300">Project</Link>
                     <Link href="/about" className="hover:text-gray-400 duration-300">About</Link>
                     <Link href="/contact" className="hover:text-gray-400 duration-300">Contact</Link>
                 </nav>
