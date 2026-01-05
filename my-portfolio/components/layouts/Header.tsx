@@ -14,14 +14,14 @@ const Header: React.FC = () => {
             transition={{ duration:0.6 }}
             className=''
         >
-            <div className=" mx-auto flex items-center justify-between py-6 px-6 ">
+            <nav className=" mx-auto flex items-center justify-between py-6 px-6 ">
                 <Link href="#"><h1 className="text-white font-bold text-xl ">USM<span className="text-gray-400 hover:text-white">A</span>N</h1></Link>
-                <nav className="hidden sm:block space-x-6 font-semibold">
+                <ul className="hidden md:block space-x-6 font-semibold">
                     <Link href="/" className="hover:text-gray-400 duration-300">Home</Link>
                     <Link href="/project" className="hover:text-gray-400 duration-300">Project</Link>
                     <Link href="/about" className="hover:text-gray-400 duration-300">About</Link>
                     <Link href="/contact" className="hover:text-gray-400 duration-300">Contact</Link>
-                </nav>
+                </ul>
 
                 {/* Hamburger Button (Mobile) */}
                 <button 
@@ -35,8 +35,22 @@ const Header: React.FC = () => {
                         <span className="block w-6 h-0.5 bg-white"></span>
                     </div>        
                 </button>
-            <button className="bg-blue-500 py-2 px-5 rounded-full text-white hover:scale-105 transition">Let's Talk</button>
-            </div>
+
+                {/* Mobile Menu */}
+                {isOpen &&(
+                    <div className="md:hidden fixed top-18 left-0 w-full shadow-lg bg-gray-700 z-40 ">
+                        <ul className="flex flex-col items-center space-y-10 min-h-screen py-6 font-medium transition duration-300">
+                            <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
+                            <Link href="/project" onClick={() => setIsOpen(false)}>Projects</Link>
+                            <Link href="/about" onClick={() => setIsOpen(false)}>About</Link>
+                            <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
+                            
+                        </ul>
+                    </div>
+                )}
+
+                <button className="bg-blue-500 py-2 px-5 rounded-full text-white hover:scale-105 transition">Let's Talk</button>
+            </nav>
         </motion.nav>
     </header>
   )
